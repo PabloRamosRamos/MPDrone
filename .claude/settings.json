@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(vercel --version)",
+      "Bash(vercel login *)",
+      "Bash(vercel --prod)",
+      "Bash(vercel domains *)",
+      "Bash(start https://vercel.com/api/v9/projects/prj_QtBc8rCmRZtSBpOePW6i68cq5WZX/domains/lab.bimode.cl/domain-connect/apply?teamId=team_hnu5tiktbI8MUTFJAOfaWeZh)",
+      "Bash(start https://vercel.com/api/v9/projects/prj_eZeaFoOeHnwBPkaw1AXXXQg9oO0x/domains/api.lab.bimode.cl/domain-connect/apply?teamId=team_hnu5tiktbI8MUTFJAOfaWeZh)",
+      "Bash(vercel env *)"
+    ]
+  }
+}
