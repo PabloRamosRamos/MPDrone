@@ -1,3 +1,4 @@
+import { Link } from '../router/Router'
 import VideoHero from '../components/VideoHero'
 import CtaBanner from '../components/CtaBanner'
 
@@ -60,9 +61,21 @@ export default function Servicios() {
     <>
       <VideoHero
         videoSrc="/videos/hero-servicios.mp4"
-        title="Todo lo que hacemos volando"
+        eyebrow="Servicios"
+        title={
+          <>
+            Todo lo que hacemos <span className="text-accent">volando</span>
+          </>
+        }
         subtitle="Soluciones desde el aire para problemas que hoy se resuelven con andamios, arneses y cierres de calle."
-      />
+      >
+        <Link to="/contacto" className="btn-primary">
+          Solicitar cotización
+        </Link>
+        <Link to="/nosotros" className="btn-secondary">
+          Conócenos
+        </Link>
+      </VideoHero>
 
       <section className="servicios-detalle container">
         {SERVICIOS.map((s) => (

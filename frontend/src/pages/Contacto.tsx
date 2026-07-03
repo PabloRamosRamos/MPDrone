@@ -47,8 +47,12 @@ export default function Contacto() {
       <VideoHero
         videoSrc="/videos/hero-drone.mp4"
         eyebrow="Contacto"
-        title="Hablemos de tu proyecto"
-        subtitle="Cuéntanos qué necesitas limpiar o inspeccionar y te enviamos una cotización en 24 horas."
+        title={
+          <>
+            Hablemos de tu <span className="text-accent">proyecto</span>
+          </>
+        }
+        subtitle="Cuéntanos tu necesidad y te enviamos una cotización en 24 horas."
       />
 
       <section className="contacto-section container">

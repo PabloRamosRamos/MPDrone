@@ -1,3 +1,4 @@
+import { Link } from '../router/Router'
 import VideoHero from '../components/VideoHero'
 import CtaBanner from '../components/CtaBanner'
 
@@ -25,9 +26,21 @@ export default function Nosotros() {
     <>
       <VideoHero
         videoSrc="/videos/hero-nosotros.mp4"
-        title="Soluciones desde el aire"
+        eyebrow="Nosotros"
+        title={
+          <>
+            Soluciones <span className="text-accent">desde el aire</span>
+          </>
+        }
         subtitle="MPDrone diseña soluciones aéreas para problemas que hoy se resuelven con andamios, arneses o inspecciones manuales lentas."
-      />
+      >
+        <Link to="/contacto" className="btn-primary">
+          Solicitar cotización
+        </Link>
+        <Link to="/servicios" className="btn-secondary">
+          Ver servicios
+        </Link>
+      </VideoHero>
 
       <section className="servicios">
         <div className="container">

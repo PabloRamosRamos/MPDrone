@@ -1,3 +1,4 @@
+import { Link } from '../router/Router'
 import VideoHero from '../components/VideoHero'
 import CtaBanner from '../components/CtaBanner'
 
@@ -6,9 +7,21 @@ export default function Galeria() {
     <>
       <VideoHero
         videoSrc="/videos/hero-galeria.mp4"
-        title="Galería"
-        subtitle="Nuestro equipo y operaciones en acción."
-      />
+        eyebrow="Galería"
+        title={
+          <>
+            Nuestro equipo <span className="text-accent">en acción</span>
+          </>
+        }
+        subtitle="Fotos y videos de nuestras operaciones, equipos y proyectos completados."
+      >
+        <Link to="/contacto" className="btn-primary">
+          Solicitar cotización
+        </Link>
+        <Link to="/servicios" className="btn-secondary">
+          Ver servicios
+        </Link>
+      </VideoHero>
 
       <section className="servicios">
         <div className="container">
