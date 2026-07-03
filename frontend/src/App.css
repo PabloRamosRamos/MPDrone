@@ -910,12 +910,17 @@ body {
   .video-hero {
     min-height: 100vh;
     height: 100vh;
-    padding-top: 64px;
-    padding-bottom: 64px;
+    padding-top: 80px;
+    padding-bottom: 48px;
+    align-items: flex-end;
   }
 
   .video-hero--compact {
     min-height: 360px;
+  }
+
+  .hero-copy {
+    padding-bottom: 32px;
   }
 
   .hero-actions {
