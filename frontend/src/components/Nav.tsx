@@ -13,13 +13,22 @@ const NAV_ITEMS = [
 export default function Nav() {
   const { path, navigate } = useRouter()
   const [menuOpen, setMenuOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
     setMenuOpen(false)
   }, [path])
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
-    <nav className="nav">
+    <nav className={`nav ${scrolled ? 'nav--scrolled' : ''}`}>
       <div className="container nav-inner">
         <Link to="/" className="nav-logo">
           <Logo />
