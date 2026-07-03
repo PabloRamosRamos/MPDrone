@@ -47,7 +47,6 @@ export default function Contacto() {
       <VideoHero
         videoSrc="/videos/hero-drone.mp4"
         eyebrow="Contacto"
-        size="compact"
         title="Hablemos de tu proyecto"
         subtitle="Cuéntanos qué necesitas limpiar o inspeccionar y te enviamos una cotización en 24 horas."
       />

@@ -60,7 +60,6 @@ export default function Servicios() {
     <>
       <VideoHero
         videoSrc="/videos/hero-servicios.mp4"
-        size="compact"
         title="Todo lo que hacemos volando"
         subtitle="Soluciones desde el aire para problemas que hoy se resuelven con andamios, arneses y cierres de calle."
       />
