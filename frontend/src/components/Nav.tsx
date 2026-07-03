@@ -28,7 +28,7 @@ export default function Nav() {
   }, [])
 
   return (
-    <nav className={`nav ${scrolled ? 'nav--scrolled' : ''}`}>
+    <nav className={`nav ${scrolled || menuOpen ? 'nav--scrolled' : ''}`}>
       <div className="container nav-inner">
         <Link to="/" className="nav-logo">
           <Logo />
