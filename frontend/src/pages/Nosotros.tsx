@@ -66,15 +66,12 @@ export default function Nosotros() {
         <div className="container">
           <div className="section-label">QUIÉNES SOMOS</div>
           <h2 className="section-title">
-            No somos una empresa
+            Soluciones
             <br />
-            de limpieza con drones
+            desde el aire
           </h2>
-          <p className="hero-subtitle" style={{ marginTop: '24px', maxWidth: '720px', marginBottom: '20px' }}>
-            Somos una empresa de soluciones desde el aire. La limpieza de fachadas y paneles solares es la puerta de entrada —el servicio más rápido de ejecutar, validar y vender hoy—, pero no define el techo del negocio.
-          </p>
-          <p className="hero-subtitle" style={{ maxWidth: '720px' }}>
-            El nicho real es amplio: cualquier problema industrial o comercial que se resuelva mejor, más rápido y con menos riesgo usando un dron en vez de un método tradicional en altura o en terreno.
+          <p className="hero-subtitle" style={{ marginTop: '24px', maxWidth: '720px' }}>
+            Cualquier problema industrial o comercial que se resuelva mejor, más rápido y con menos riesgo usando un dron en vez de un método tradicional en altura o en terreno.
           </p>
         </div>
       </section>
