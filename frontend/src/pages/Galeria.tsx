@@ -5,7 +5,7 @@ export default function Galeria() {
   return (
     <>
       <VideoHero
-        videoSrc="/videos/hero-drone.mp4"
+        videoSrc="/videos/hero-galeria.mp4"
         size="compact"
         title="Galería"
         subtitle="Nuestro equipo y operaciones en acción."
