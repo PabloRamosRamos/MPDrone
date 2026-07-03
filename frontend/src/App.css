@@ -201,8 +201,9 @@ body {
   inset: 0;
   z-index: 1;
   background:
-    linear-gradient(90deg, rgba(6, 19, 33, 0.75) 0%, rgba(6, 19, 33, 0.55) 42%, rgba(6, 19, 33, 0.35) 100%),
-    linear-gradient(0deg, rgba(6, 19, 33, 0.7) 0%, rgba(6, 19, 33, 0.05) 45%, rgba(6, 19, 33, 0.4) 100%);
+    linear-gradient(90deg, rgba(6, 19, 33, 0.65) 0%, rgba(6, 19, 33, 0.45) 42%, rgba(6, 19, 33, 0.25) 100%),
+    linear-gradient(0deg, rgba(6, 19, 33, 0.55) 0%, transparent 45%, rgba(6, 19, 33, 0.3) 100%);
+  pointer-events: none;
 }
 
 /* Fallback: sin video disponible aún -> gradiente de marca */
@@ -266,6 +267,7 @@ body {
   color: #fff;
   line-height: 1.08;
   letter-spacing: -0.02em;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4), 0 4px 24px rgba(0, 0, 0, 0.3);
 }
 
 .text-accent {
@@ -274,10 +276,11 @@ body {
 
 .hero-subtitle {
   font-size: clamp(16px, 2.2vw, 21px);
-  color: #A8B4C4;
+  color: #C4CEDA;
   margin-top: 26px;
   line-height: 1.6;
   max-width: 600px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .hero-actions {
