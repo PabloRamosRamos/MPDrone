@@ -46,8 +46,6 @@ export default function Contacto() {
     <>
       <VideoHero
         videoSrc="/videos/hero-drone.mp4"
-        videoSrcMobile="/videos/hero-drone-mobile.mp4"
-        posterSrc="/videos/hero-drone-poster.jpg"
         eyebrow="Contacto"
         size="compact"
         title="Hablemos de tu proyecto"
