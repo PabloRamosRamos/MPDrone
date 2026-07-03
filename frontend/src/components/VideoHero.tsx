@@ -1,4 +1,4 @@
-import { useState, type ReactNode } from 'react'
+import { useState, useEffect, useRef, type ReactNode } from 'react'
 
 interface VideoHeroProps {
   videoSrc: string
@@ -33,11 +33,42 @@ export default function VideoHero({
   size = 'full',
 }: VideoHeroProps) {
   const [videoFailed, setVideoFailed] = useState(false)
+  const videoRef = useRef<HTMLVideoElement>(null)
+
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video) return
+
+    // Forzar reproducción cuando el video esté listo
+    const playVideo = async () => {
+      try {
+        await video.play()
+      } catch (error) {
+        console.log('Autoplay prevented:', error)
+        // Intentar reproducir en el primer click/touch
+        const playOnInteraction = () => {
+          video.play().catch(() => {})
+          document.removeEventListener('click', playOnInteraction)
+          document.removeEventListener('touchstart', playOnInteraction)
+        }
+        document.addEventListener('click', playOnInteraction)
+        document.addEventListener('touchstart', playOnInteraction)
+      }
+    }
+
+    if (video.readyState >= 3) {
+      playVideo()
+    } else {
+      video.addEventListener('canplay', playVideo)
+      return () => video.removeEventListener('canplay', playVideo)
+    }
+  }, [])
 
   return (
     <section className={`video-hero video-hero--${size}${videoFailed ? ' video-hero--fallback' : ''}`}>
       {!videoFailed && (
         <video
+          ref={videoRef}
           className="video-hero-media"
           autoPlay
           muted

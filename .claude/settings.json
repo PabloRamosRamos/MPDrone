@@ -7,7 +7,10 @@
       "Bash(vercel domains *)",
       "Bash(start https://vercel.com/api/v9/projects/prj_QtBc8rCmRZtSBpOePW6i68cq5WZX/domains/lab.bimode.cl/domain-connect/apply?teamId=team_hnu5tiktbI8MUTFJAOfaWeZh)",
       "Bash(start https://vercel.com/api/v9/projects/prj_eZeaFoOeHnwBPkaw1AXXXQg9oO0x/domains/api.lab.bimode.cl/domain-connect/apply?teamId=team_hnu5tiktbI8MUTFJAOfaWeZh)",
-      "Bash(vercel env *)"
+      "Bash(vercel env *)",
+      "Bash(vercel inspect *)",
+      "Bash(vercel link *)",
+      "Bash(vercel project *)"
     ]
   }
 }
