@@ -44,6 +44,26 @@ export default function Nosotros() {
 
       <section className="servicios">
         <div className="container">
+          <div className="section-label">CERTIFICACIÓN Y OPERACIÓN LEGAL</div>
+          <h2 className="section-title">
+            Certificación AOC
+            <br />
+            de la DGAC
+          </h2>
+          <p className="hero-subtitle" style={{ marginTop: '24px', maxWidth: '720px', marginBottom: '20px' }}>
+            MPDrone cuenta con <strong>certificación AOC (Air Operator Certificate)</strong> otorgada por la DGAC, la única institución habilitada en Chile para certificar y autorizar operaciones aéreas comerciales con drones.
+          </p>
+          <p className="hero-subtitle" style={{ maxWidth: '720px', marginBottom: '20px' }}>
+            Nuestros pilotos están certificados por la DGAC bajo normativa vigente, lo que garantiza operación legal, segura y trazable para cada proyecto.
+          </p>
+          <p className="hero-subtitle" style={{ maxWidth: '720px' }}>
+            Operamos bajo protocolo, con seguro de responsabilidad civil y cumplimiento total de la regulación aeronáutica chilena.
+          </p>
+        </div>
+      </section>
+
+      <section className="servicios" style={{ background: '#0A2540' }}>
+        <div className="container">
           <div className="section-label">QUIÉNES SOMOS</div>
           <h2 className="section-title">
             No somos una empresa

@@ -153,14 +153,17 @@ body {
 }
 
 .btn-secondary {
-  display: inline-block;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
   color: #fff;
   font-size: 17px;
-  font-weight: 500;
+  font-weight: 600;
   padding: 16px 32px;
   border-radius: 10px;
-  background: transparent;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
   cursor: pointer;
   transition: all 0.2s;
   font-family: 'Space Grotesk', sans-serif;
@@ -169,8 +172,9 @@ body {
 }
 
 .btn-secondary:hover {
-  border-color: rgba(255, 255, 255, 0.4);
-  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
 }
 
 /* VIDEO HERO (todas las páginas) — el video/overlay son full-bleed;
