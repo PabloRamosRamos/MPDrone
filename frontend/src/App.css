@@ -991,8 +991,8 @@ body {
   }
 
   .nav-inner {
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   .logo-text {
