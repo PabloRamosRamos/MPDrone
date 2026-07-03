@@ -5,8 +5,7 @@ import Logo from './Logo'
 const NAV_ITEMS = [
   { label: 'Inicio', to: '/' },
   { label: 'Servicios', to: '/servicios' },
-  { label: 'Tecnología', to: '/tecnologia' },
-  { label: 'Casos', to: '/casos' },
+  { label: 'Galería', to: '/galeria' },
   { label: 'Nosotros', to: '/nosotros' },
 ]
 
