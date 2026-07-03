@@ -199,8 +199,8 @@ body {
   inset: 0;
   z-index: 1;
   background:
-    linear-gradient(90deg, rgba(6, 19, 33, 0.94) 0%, rgba(6, 19, 33, 0.78) 42%, rgba(6, 19, 33, 0.55) 100%),
-    linear-gradient(0deg, rgba(6, 19, 33, 0.9) 0%, rgba(6, 19, 33, 0.15) 45%, rgba(6, 19, 33, 0.55) 100%);
+    linear-gradient(90deg, rgba(6, 19, 33, 0.75) 0%, rgba(6, 19, 33, 0.55) 42%, rgba(6, 19, 33, 0.35) 100%),
+    linear-gradient(0deg, rgba(6, 19, 33, 0.7) 0%, rgba(6, 19, 33, 0.05) 45%, rgba(6, 19, 33, 0.4) 100%);
 }
 
 /* Fallback: sin video disponible aún -> gradiente de marca */
@@ -215,7 +215,7 @@ body {
   position: absolute;
   inset: 0;
   z-index: 1;
-  opacity: 0.05;
+  opacity: 0.02;
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.6) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.6) 1px, transparent 1px);

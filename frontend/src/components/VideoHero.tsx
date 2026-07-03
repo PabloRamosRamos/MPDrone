@@ -39,28 +39,23 @@ export default function VideoHero({
     const video = videoRef.current
     if (!video) return
 
-    // Forzar reproducción cuando el video esté listo
-    const playVideo = async () => {
-      try {
-        await video.play()
-      } catch (error) {
-        console.log('Autoplay prevented:', error)
-        // Intentar reproducir en el primer click/touch
-        const playOnInteraction = () => {
-          video.play().catch(() => {})
-          document.removeEventListener('click', playOnInteraction)
-          document.removeEventListener('touchstart', playOnInteraction)
-        }
-        document.addEventListener('click', playOnInteraction)
-        document.addEventListener('touchstart', playOnInteraction)
-      }
+    // Intentar reproducir inmediatamente
+    const attemptPlay = () => {
+      video.play().catch((error) => {
+        console.log('Autoplay blocked, waiting for user interaction:', error)
+      })
     }
 
-    if (video.readyState >= 3) {
-      playVideo()
-    } else {
-      video.addEventListener('canplay', playVideo)
-      return () => video.removeEventListener('canplay', playVideo)
+    // Intentar reproducir cuando cargue
+    video.addEventListener('loadeddata', attemptPlay)
+
+    // Intentar reproducir inmediatamente si ya está listo
+    if (video.readyState >= 2) {
+      attemptPlay()
+    }
+
+    return () => {
+      video.removeEventListener('loadeddata', attemptPlay)
     }
   }, [])
 
