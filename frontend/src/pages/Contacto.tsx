@@ -45,15 +45,16 @@ export default function Contacto() {
   return (
     <>
       <VideoHero
-        videoSrc="/videos/hero-contacto.mp4"
-        posterSrc="/videos/hero-contacto-poster.jpg"
+        videoSrc="/videos/hero-drone.mp4"
+        videoSrcMobile="/videos/hero-drone-mobile.mp4"
+        posterSrc="/videos/hero-drone-poster.jpg"
         eyebrow="Contacto"
         size="compact"
         title="Hablemos de tu proyecto"
         subtitle="Cuéntanos qué necesitas limpiar o inspeccionar y te enviamos una cotización en 24 horas."
       />
 
-      <section className="contacto-section">
+      <section className="contacto-section container">
         <div className="contacto-info">
           <div className="section-label">CONTACTO DIRECTO</div>
           <h2 className="section-title">Coordinemos una visita técnica</h2>

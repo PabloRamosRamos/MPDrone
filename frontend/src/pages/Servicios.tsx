@@ -38,15 +38,16 @@ export default function Servicios() {
   return (
     <>
       <VideoHero
-        videoSrc="/videos/hero-servicios.mp4"
-        posterSrc="/videos/hero-servicios-poster.jpg"
+        videoSrc="/videos/hero-drone.mp4"
+        videoSrcMobile="/videos/hero-drone-mobile.mp4"
+        posterSrc="/videos/hero-drone-poster.jpg"
         eyebrow="Servicios"
         size="compact"
         title="Todo lo que hacemos volando"
         subtitle="Tres líneas de servicio, un mismo estándar: seguridad, precisión y cero interrupción de tu operación."
       />
 
-      <section className="servicios-detalle">
+      <section className="servicios-detalle container">
         {SERVICIOS.map((s) => (
           <div className="servicio-detalle-card" key={s.title}>
             <div className={`servicio-icon ${s.color}`}>
@@ -67,39 +68,41 @@ export default function Servicios() {
       </section>
 
       <section className="proceso">
-        <div className="proceso-content">
-          <div className="section-label">CÓMO COTIZAMOS</div>
-          <h2 className="section-title">
-            Un proceso simple,
-            <br />
-            sin letra chica
-          </h2>
-          <div className="proceso-steps">
-            <div className="step">
-              <div className="step-number">1</div>
-              <div className="step-content">
-                <h4>Nos cuentas tu estructura</h4>
-                <p>m², tipo de superficie y accesos disponibles.</p>
+        <div className="container proceso-row">
+          <div className="proceso-content">
+            <div className="section-label">CÓMO COTIZAMOS</div>
+            <h2 className="section-title">
+              Un proceso simple,
+              <br />
+              sin letra chica
+            </h2>
+            <div className="proceso-steps">
+              <div className="step">
+                <div className="step-number">1</div>
+                <div className="step-content">
+                  <h4>Nos cuentas tu estructura</h4>
+                  <p>m², tipo de superficie y accesos disponibles.</p>
+                </div>
               </div>
-            </div>
-            <div className="step">
-              <div className="step-number">2</div>
-              <div className="step-content">
-                <h4>Visita técnica (opcional)</h4>
-                <p>Para edificios complejos o de gran altura.</p>
+              <div className="step">
+                <div className="step-number">2</div>
+                <div className="step-content">
+                  <h4>Visita técnica (opcional)</h4>
+                  <p>Para edificios complejos o de gran altura.</p>
+                </div>
               </div>
-            </div>
-            <div className="step">
-              <div className="step-number">3</div>
-              <div className="step-content">
-                <h4>Cotización en 24 horas</h4>
-                <p>Precio por m², plazo de ejecución y condiciones.</p>
+              <div className="step">
+                <div className="step-number">3</div>
+                <div className="step-content">
+                  <h4>Cotización en 24 horas</h4>
+                  <p>Precio por m², plazo de ejecución y condiciones.</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className="proceso-image">
-          <div className="image-placeholder">Arrastra una foto del equipo / operación</div>
+          <div className="proceso-image">
+            <div className="image-placeholder">Arrastra una foto del equipo / operación</div>
+          </div>
         </div>
       </section>
 

@@ -31,8 +31,9 @@ export default function Tecnologia() {
   return (
     <>
       <VideoHero
-        videoSrc="/videos/hero-tecnologia.mp4"
-        posterSrc="/videos/hero-tecnologia-poster.jpg"
+        videoSrc="/videos/hero-drone.mp4"
+        videoSrcMobile="/videos/hero-drone-mobile.mp4"
+        posterSrc="/videos/hero-drone-poster.jpg"
         eyebrow="Tecnología"
         size="compact"
         title="Precisión de ingeniería, no improvisación"
@@ -40,41 +41,45 @@ export default function Tecnologia() {
       />
 
       <section className="servicios">
-        <div className="section-label">EQUIPAMIENTO</div>
-        <h2 className="section-title">Con qué volamos</h2>
-        <div className="servicios-grid">
-          {EQUIPO.map((e) => (
-            <div className="servicio-card" key={e.title}>
-              <h3>{e.title}</h3>
-              <p>{e.desc}</p>
-            </div>
-          ))}
+        <div className="container">
+          <div className="section-label">EQUIPAMIENTO</div>
+          <h2 className="section-title">Con qué volamos</h2>
+          <div className="servicios-grid">
+            {EQUIPO.map((e) => (
+              <div className="servicio-card" key={e.title}>
+                <h3>{e.title}</h3>
+                <p>{e.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       <section className="proceso">
-        <div className="proceso-content">
-          <div className="section-label">SEGURIDAD</div>
-          <h2 className="section-title">
-            Cero exposición
-            <br />
-            en altura
-          </h2>
-          <p className="hero-subtitle" style={{ marginTop: '18px', maxWidth: '520px' }}>
-            Ningún trabajador sube a un andamio o góndola. Todo el riesgo de altura lo asume el dron, operado desde tierra bajo protocolo.
-          </p>
-          <ul className="protocolo-list">
-            {PROTOCOLO.map((p) => (
-              <li key={p}>{p}</li>
-            ))}
-          </ul>
-        </div>
-        <div className="proceso-image">
-          <div className="image-placeholder">Arrastra una foto del equipo en operación</div>
+        <div className="container proceso-row">
+          <div className="proceso-content">
+            <div className="section-label">SEGURIDAD</div>
+            <h2 className="section-title">
+              Cero exposición
+              <br />
+              en altura
+            </h2>
+            <p className="hero-subtitle" style={{ marginTop: '18px', maxWidth: '520px' }}>
+              Ningún trabajador sube a un andamio o góndola. Todo el riesgo de altura lo asume el dron, operado desde tierra bajo protocolo.
+            </p>
+            <ul className="protocolo-list">
+              {PROTOCOLO.map((p) => (
+                <li key={p}>{p}</li>
+              ))}
+            </ul>
+          </div>
+          <div className="proceso-image">
+            <div className="image-placeholder">Arrastra una foto del equipo en operación</div>
+          </div>
         </div>
       </section>
 
-      <section className="stats">
+      <section className="stats container">
         <div className="stat">
           <div className="stat-number">RTK</div>
           <div className="stat-label">posicionamiento centimétrico</div>

@@ -24,8 +24,9 @@ export default function Nosotros() {
   return (
     <>
       <VideoHero
-        videoSrc="/videos/hero-nosotros.mp4"
-        posterSrc="/videos/hero-nosotros-poster.jpg"
+        videoSrc="/videos/hero-drone.mp4"
+        videoSrcMobile="/videos/hero-drone-mobile.mp4"
+        posterSrc="/videos/hero-drone-poster.jpg"
         eyebrow="Nosotros"
         size="compact"
         title="Normalizamos el dron en la mantención urbana"
@@ -33,27 +34,31 @@ export default function Nosotros() {
       />
 
       <section className="servicios">
-        <div className="section-label">POR QUÉ EXISTIMOS</div>
-        <h2 className="section-title">
-          Seguridad y precisión
-          <br />
-          desde el aire
-        </h2>
-        <p className="hero-subtitle" style={{ marginTop: '24px', maxWidth: '720px' }}>
-          Los métodos tradicionales de limpieza e inspección en altura —andamios, góndolas, arnés— son lentos, costosos y exponen a las personas a riesgo. MPDrone reemplaza esa exposición por tecnología: drones industriales operados por pilotos certificados, con el mismo estándar de calidad y una fracción del tiempo y el riesgo.
-        </p>
+        <div className="container">
+          <div className="section-label">POR QUÉ EXISTIMOS</div>
+          <h2 className="section-title">
+            Seguridad y precisión
+            <br />
+            desde el aire
+          </h2>
+          <p className="hero-subtitle" style={{ marginTop: '24px', maxWidth: '720px' }}>
+            Los métodos tradicionales de limpieza e inspección en altura —andamios, góndolas, arnés— son lentos, costosos y exponen a las personas a riesgo. MPDrone reemplaza esa exposición por tecnología: drones industriales operados por pilotos certificados, con el mismo estándar de calidad y una fracción del tiempo y el riesgo.
+          </p>
+        </div>
       </section>
 
       <section className="servicios" style={{ background: '#0A2540' }}>
-        <div className="section-label">VALORES</div>
-        <h2 className="section-title">Cómo trabajamos</h2>
-        <div className="servicios-grid">
-          {VALORES.map((v) => (
-            <div className="servicio-card" key={v.title}>
-              <h3>{v.title}</h3>
-              <p>{v.desc}</p>
-            </div>
-          ))}
+        <div className="container">
+          <div className="section-label">VALORES</div>
+          <h2 className="section-title">Cómo trabajamos</h2>
+          <div className="servicios-grid">
+            {VALORES.map((v) => (
+              <div className="servicio-card" key={v.title}>
+                <h3>{v.title}</h3>
+                <p>{v.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

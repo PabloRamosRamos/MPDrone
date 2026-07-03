@@ -7,7 +7,7 @@ interface CtaBannerProps {
 
 export default function CtaBanner({ title, subtitle }: CtaBannerProps) {
   return (
-    <section className="cta">
+    <section className="cta container">
       <div className="cta-bg-logo"></div>
       <div className="cta-content">
         <h2>{title}</h2>

@@ -20,37 +20,39 @@ export default function Nav() {
 
   return (
     <nav className="nav">
-      <Link to="/" className="nav-logo">
-        <Logo />
-        <div className="logo-text">
-          MP<span className="logo-accent">DRONE</span>
-        </div>
-      </Link>
+      <div className="container nav-inner">
+        <Link to="/" className="nav-logo">
+          <Logo />
+          <div className="logo-text">
+            MP<span className="logo-accent">DRONE</span>
+          </div>
+        </Link>
 
-      <div className={`nav-links ${menuOpen ? 'nav-links--open' : ''}`}>
-        {NAV_ITEMS.map((item) => (
-          <Link
-            key={item.to}
-            to={item.to}
-            className={`nav-link ${path === item.to ? 'nav-link--active' : ''}`}
-          >
-            {item.label}
-          </Link>
-        ))}
-        <button className="btn-primary" onClick={() => navigate('/contacto')}>
-          Cotizar
+        <div className={`nav-links ${menuOpen ? 'nav-links--open' : ''}`}>
+          {NAV_ITEMS.map((item) => (
+            <Link
+              key={item.to}
+              to={item.to}
+              className={`nav-link ${path === item.to ? 'nav-link--active' : ''}`}
+            >
+              {item.label}
+            </Link>
+          ))}
+          <button className="btn-primary" onClick={() => navigate('/contacto')}>
+            Cotizar
+          </button>
+        </div>
+
+        <button
+          className={`nav-toggle ${menuOpen ? 'nav-toggle--open' : ''}`}
+          aria-label="Abrir menú"
+          onClick={() => setMenuOpen((v) => !v)}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
       </div>
-
-      <button
-        className={`nav-toggle ${menuOpen ? 'nav-toggle--open' : ''}`}
-        aria-label="Abrir menú"
-        onClick={() => setMenuOpen((v) => !v)}
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
     </nav>
   )
 }

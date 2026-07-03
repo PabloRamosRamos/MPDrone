@@ -2,6 +2,7 @@ import { useState, type ReactNode } from 'react'
 
 interface VideoHeroProps {
   videoSrc: string
+  videoSrcMobile?: string
   videoSrcWebm?: string
   posterSrc?: string
   eyebrow?: string
@@ -15,9 +16,14 @@ interface VideoHeroProps {
  * Hero con video de fondo en loop. Si el archivo de video aún no existe
  * (por ejemplo, mientras se sube el material real), cae de forma elegante
  * a un fondo con gradiente de marca en vez de romper el layout.
+ *
+ * Si se pasa `videoSrcMobile`, el navegador lo prioriza en pantallas
+ * angostas (<=768px) usando el atributo `media` del <source>, para no
+ * gastar el ancho de banda de un archivo pesado en celulares.
  */
 export default function VideoHero({
   videoSrc,
+  videoSrcMobile,
   videoSrcWebm,
   posterSrc,
   eyebrow,
@@ -41,22 +47,25 @@ export default function VideoHero({
           poster={posterSrc}
           onError={() => setVideoFailed(true)}
         >
+          {videoSrcMobile && <source src={videoSrcMobile} type="video/mp4" media="(max-width: 768px)" />}
           {videoSrcWebm && <source src={videoSrcWebm} type="video/webm" />}
           <source src={videoSrc} type="video/mp4" />
         </video>
       )}
       <div className="video-hero-overlay" />
       <div className="video-hero-grid" />
-      <div className="video-hero-content">
-        {eyebrow && (
-          <div className="badge">
-            <span className="badge-dot"></span>
-            <span>{eyebrow}</span>
-          </div>
-        )}
-        <h1 className="hero-title">{title}</h1>
-        {subtitle && <p className="hero-subtitle">{subtitle}</p>}
-        {children && <div className="hero-actions">{children}</div>}
+      <div className="video-hero-content container">
+        <div className="hero-copy">
+          {eyebrow && (
+            <div className="badge">
+              <span className="badge-dot"></span>
+              <span>{eyebrow}</span>
+            </div>
+          )}
+          <h1 className="hero-title">{title}</h1>
+          {subtitle && <p className="hero-subtitle">{subtitle}</p>}
+          {children && <div className="hero-actions">{children}</div>}
+        </div>
       </div>
     </section>
   )

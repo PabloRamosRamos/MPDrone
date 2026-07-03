@@ -29,15 +29,16 @@ export default function Casos() {
   return (
     <>
       <VideoHero
-        videoSrc="/videos/hero-casos.mp4"
-        posterSrc="/videos/hero-casos-poster.jpg"
+        videoSrc="/videos/hero-drone.mp4"
+        videoSrcMobile="/videos/hero-drone-mobile.mp4"
+        posterSrc="/videos/hero-drone-poster.jpg"
         eyebrow="Casos"
         size="compact"
         title="Resultados, no promesas"
         subtitle="Así aplicamos limpieza e inspección aérea en edificios, plantas solares e instalaciones industriales."
       />
 
-      <section className="casos-grid">
+      <section className="casos-grid container">
         {CASOS.map((c) => (
           <article className="caso-card" key={c.titulo}>
             <span className="caso-industria">{c.industria}</span>
@@ -58,7 +59,7 @@ export default function Casos() {
         ))}
       </section>
 
-      <section className="stats">
+      <section className="stats container">
         <div className="stat">
           <div className="stat-number">+320</div>
           <div className="stat-label">proyectos ejecutados</div>

@@ -18,6 +18,20 @@ body {
   background: #0A2540;
 }
 
+/* CONTENEDOR CENTRADO — única fuente de padding horizontal y ancho máximo.
+   Todas las secciones son full-bleed (fondo a lo ancho completo) y su
+   contenido va envuelto en .container para quedar centrado, igual que
+   bimode.cl. Las secciones nunca deben fijar su propio padding horizontal:
+   solo padding-top/padding-bottom. */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 56px;
+  padding-right: 56px;
+}
+
 /* NAV */
 .nav {
   position: sticky;
@@ -26,10 +40,14 @@ body {
   background: rgba(10, 37, 64, 0.85);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.nav-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 56px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .nav-logo {
@@ -148,19 +166,22 @@ body {
   background: rgba(255, 255, 255, 0.05);
 }
 
-/* VIDEO HERO (todas las páginas) */
+/* VIDEO HERO (todas las páginas) — el video/overlay son full-bleed;
+   el texto va centrado dentro de .container + .hero-copy. */
 .video-hero {
   position: relative;
   overflow: hidden;
   display: flex;
   align-items: center;
-  padding: 96px 56px 110px;
+  padding-top: 96px;
+  padding-bottom: 110px;
   min-height: 640px;
 }
 
 .video-hero--compact {
   min-height: 420px;
-  padding: 72px 56px 84px;
+  padding-top: 72px;
+  padding-bottom: 84px;
 }
 
 .video-hero-media {
@@ -201,16 +222,14 @@ body {
   pointer-events: none;
 }
 
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 760px;
-}
-
 .video-hero-content {
   position: relative;
   z-index: 2;
-  max-width: 760px;
+  width: 100%;
+}
+
+.hero-copy {
+  max-width: 780px;
 }
 
 .badge {
@@ -290,9 +309,13 @@ body {
 
 /* TRUST SECTION */
 .trust-section {
-  padding: 36px 56px;
+  padding-top: 36px;
+  padding-bottom: 36px;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.trust-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -318,9 +341,10 @@ body {
   color: #C4CEDA;
 }
 
-/* SERVICIOS */
+/* SERVICIOS (bloque destacado, fondo alterno a lo ancho completo) */
 .servicios {
-  padding: 96px 56px;
+  padding-top: 96px;
+  padding-bottom: 96px;
   background: #08203A;
 }
 
@@ -394,9 +418,11 @@ body {
   line-height: 1.6;
 }
 
-/* SERVICIOS - detalle (página Servicios) */
+/* SERVICIOS - detalle (página Servicios). Sin fondo propio, se combina
+   directamente con .container en el JSX. */
 .servicios-detalle {
-  padding: 96px 56px;
+  padding-top: 96px;
+  padding-bottom: 96px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
@@ -452,9 +478,10 @@ body {
   line-height: 1.6;
 }
 
-/* CASOS */
+/* CASOS — sin fondo propio, se combina con .container en el JSX */
 .casos-grid {
-  padding: 96px 56px;
+  padding-top: 96px;
+  padding-bottom: 96px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
@@ -509,9 +536,10 @@ body {
   color: #A8E600;
 }
 
-/* CONTACTO */
+/* CONTACTO — sin fondo propio, se combina con .container en el JSX */
 .contacto-section {
-  padding: 96px 56px;
+  padding-top: 96px;
+  padding-bottom: 96px;
   display: grid;
   grid-template-columns: 0.85fr 1.15fr;
   gap: 72px;
@@ -598,9 +626,10 @@ body {
   color: #FF6B6B;
 }
 
-/* STATS */
+/* STATS — sin fondo propio, se combina con .container en el JSX */
 .stats {
-  padding: 80px 56px;
+  padding-top: 80px;
+  padding-bottom: 80px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
@@ -618,10 +647,14 @@ body {
   margin-top: 6px;
 }
 
-/* PROCESO */
+/* PROCESO (fondo alterno a lo ancho completo) */
 .proceso {
-  padding: 96px 56px;
+  padding-top: 96px;
+  padding-bottom: 96px;
   background: #08203A;
+}
+
+.proceso-row {
   display: flex;
   gap: 80px;
   align-items: center;
@@ -680,9 +713,10 @@ body {
   justify-content: center;
 }
 
-/* CTA */
+/* CTA — sin fondo propio, se combina con .container en el JSX */
 .cta {
-  padding: 110px 56px;
+  padding-top: 110px;
+  padding-bottom: 110px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -726,9 +760,10 @@ body {
   margin-top: 40px;
 }
 
-/* FOOTER */
+/* FOOTER (fondo alterno a lo ancho completo) */
 .footer {
-  padding: 56px 56px 48px;
+  padding-top: 56px;
+  padding-bottom: 48px;
   background: #061A2E;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
@@ -799,25 +834,9 @@ body {
 
 /* Responsive */
 @media (max-width: 1024px) {
-  .nav {
-    padding: 20px 32px;
-  }
-
-  .video-hero,
-  .servicios,
-  .servicios-detalle,
-  .casos-grid,
-  .contacto-section,
-  .stats,
-  .proceso,
-  .cta,
-  .footer {
+  .container {
     padding-left: 32px;
     padding-right: 32px;
-  }
-
-  .hero-title {
-    font-size: 52px;
   }
 
   .servicios-grid,
@@ -835,7 +854,7 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .proceso {
+  .proceso-row {
     flex-direction: column;
   }
 
@@ -892,18 +911,9 @@ body {
     min-height: 360px;
   }
 
-  .hero-title {
-    font-size: 38px;
-  }
-
   .hero-actions {
     flex-direction: column;
     align-items: stretch;
-  }
-
-  .section-title,
-  .cta-content h2 {
-    font-size: 32px;
   }
 
   .stats {
@@ -941,7 +951,7 @@ body {
     width: 100%;
   }
 
-  .trust-section {
+  .trust-inner {
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
@@ -952,7 +962,7 @@ body {
     gap: 24px;
   }
 
-  .proceso {
+  .proceso-row {
     gap: 40px;
   }
 
@@ -963,26 +973,18 @@ body {
 
 /* Teléfonos pequeños */
 @media (max-width: 480px) {
-  .nav {
-    padding: 16px 20px;
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .nav-inner {
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 
   .logo-text {
     font-size: 17px;
-  }
-
-  .video-hero,
-  .servicios,
-  .servicios-detalle,
-  .casos-grid,
-  .contacto-section,
-  .stats,
-  .proceso,
-  .cta,
-  .footer,
-  .trust-section {
-    padding-left: 20px;
-    padding-right: 20px;
   }
 
   .video-hero {
@@ -1014,14 +1016,17 @@ body {
   }
 
   .stats {
-    padding: 56px 20px;
+    padding-top: 56px;
+    padding-bottom: 56px;
   }
 
   .cta {
-    padding: 72px 20px;
+    padding-top: 72px;
+    padding-bottom: 72px;
   }
 
   .footer {
-    padding: 44px 20px 32px;
+    padding-top: 44px;
+    padding-bottom: 32px;
   }
 }
