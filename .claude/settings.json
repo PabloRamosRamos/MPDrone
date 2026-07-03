@@ -10,7 +10,9 @@
       "Bash(vercel env *)",
       "Bash(vercel inspect *)",
       "Bash(vercel link *)",
-      "Bash(vercel project *)"
+      "Bash(vercel project *)",
+      "Bash(vercel ls *)",
+      "Bash(curl -s https://lab.bimode.cl/videos/hero-drone.mp4 -I)"
     ]
   }
 }

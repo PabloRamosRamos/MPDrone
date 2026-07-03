@@ -37,27 +37,42 @@ export default function VideoHero({
 
   useEffect(() => {
     const video = videoRef.current
-    if (!video) return
+    if (!video) {
+      console.log('VideoHero: No video ref')
+      return
+    }
+
+    console.log('VideoHero: Video element found', {
+      src: videoSrc,
+      readyState: video.readyState
+    })
 
     // Intentar reproducir inmediatamente
     const attemptPlay = () => {
-      video.play().catch((error) => {
-        console.log('Autoplay blocked, waiting for user interaction:', error)
-      })
+      console.log('VideoHero: Attempting to play video')
+      video.play()
+        .then(() => console.log('VideoHero: Video playing successfully'))
+        .catch((error) => {
+          console.error('VideoHero: Autoplay blocked:', error)
+        })
     }
 
-    // Intentar reproducir cuando cargue
-    video.addEventListener('loadeddata', attemptPlay)
+    // Eventos de video para debug
+    video.addEventListener('loadedmetadata', () => console.log('VideoHero: Metadata loaded'))
+    video.addEventListener('loadeddata', () => {
+      console.log('VideoHero: Data loaded, attempting play')
+      attemptPlay()
+    })
+    video.addEventListener('play', () => console.log('VideoHero: Play event fired'))
+    video.addEventListener('playing', () => console.log('VideoHero: Video is playing'))
+    video.addEventListener('error', (e) => console.error('VideoHero: Video error:', e))
 
     // Intentar reproducir inmediatamente si ya está listo
     if (video.readyState >= 2) {
+      console.log('VideoHero: Video already ready, playing now')
       attemptPlay()
     }
-
-    return () => {
-      video.removeEventListener('loadeddata', attemptPlay)
-    }
-  }, [])
+  }, [videoSrc])
 
   return (
     <section className={`video-hero video-hero--${size}${videoFailed ? ' video-hero--fallback' : ''}`}>
