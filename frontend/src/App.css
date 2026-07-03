@@ -468,6 +468,24 @@ body {
   line-height: 1.6;
 }
 
+.servicio-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.servicio-tag {
+  display: inline-block;
+  background: rgba(0, 194, 255, 0.1);
+  border: 1px solid rgba(0, 194, 255, 0.3);
+  color: #00C2FF;
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
 /* Lista de protocolo (Tecnología) */
 .protocolo-list {
   margin-top: 24px;
