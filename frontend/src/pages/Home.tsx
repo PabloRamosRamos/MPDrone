@@ -7,21 +7,19 @@ export default function Home() {
     <>
       <VideoHero
         videoSrc="/videos/hero-drone.mp4"
-        videoSrcMobile="/videos/hero-drone-mobile.mp4"
-        posterSrc="/videos/hero-drone-poster.jpg"
         eyebrow="Operación certificada DGAC · Chile"
         title={
           <>
-            Limpieza e inspección industrial <span className="text-accent">desde el aire</span>
+            Soluciones <span className="text-accent">desde el aire</span>
           </>
         }
-        subtitle="Drones de alta precisión para fachadas, paneles solares y estructuras de difícil acceso. Sin andamios, sin detener tu operación."
+        subtitle="Reemplazamos andamios, góndolas y arneses por drones industriales. Limpieza e inspección en altura más segura, más rápida, sin interrumpir tu operación."
       >
         <Link to="/contacto" className="btn-primary">
           Solicitar cotización
         </Link>
-        <Link to="/tecnologia" className="btn-secondary">
-          Ver cómo funciona
+        <Link to="/servicios" className="btn-secondary">
+          Ver servicios
         </Link>
       </VideoHero>
 
