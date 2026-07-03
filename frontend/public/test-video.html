@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Video</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: black;
+        }
+        video {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: white; position: absolute; top: 20px; left: 20px; z-index: 999;">TEST VIDEO</h1>
+    <video autoplay muted loop playsinline controls>
+        <source src="/videos/hero-drone.mp4" type="video/mp4">
+    </video>
+    <script>
+        const video = document.querySelector('video');
+        console.log('Video element:', video);
+        console.log('Video src:', video.currentSrc);
+        video.addEventListener('loadeddata', () => console.log('Video loaded'));
+        video.addEventListener('play', () => console.log('Video playing'));
+        video.addEventListener('error', (e) => console.error('Video error:', e));
+
+        // Intentar reproducir manualmente
+        video.play().then(() => {
+            console.log('Play success');
+        }).catch(err => {
+            console.error('Play failed:', err);
+        });
+    </script>
+</body>
+</html>
