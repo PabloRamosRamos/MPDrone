@@ -13,7 +13,7 @@ export default function Home() {
             Soluciones <span className="text-accent">desde el aire</span>
           </>
         }
-        subtitle="Reemplazamos andamios, góndolas y arneses por drones industriales. Limpieza e inspección en altura más segura, más rápida, sin interrumpir tu operación."
+        subtitle="Reemplazamos andamios, góndolas y arneses por drones industriales. Más seguro, más rápido, sin interrumpir tu operación."
       >
         <Link to="/contacto" className="btn-primary">
           Solicitar cotización

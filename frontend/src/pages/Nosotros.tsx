@@ -24,7 +24,9 @@ export default function Nosotros() {
   return (
     <>
       <VideoHero
-        videoSrc="/videos/hero-drone.mp4"
+        videoSrc="/videos/hero-nosotros.mp4"
+        videoSrcMobile="/videos/hero-nosotros-mobile.mp4"
+        posterSrc="/videos/hero-nosotros-poster.jpg"
         size="compact"
         title="Soluciones desde el aire"
         subtitle="MPDrone diseña soluciones aéreas para problemas que hoy se resuelven con andamios, arneses o inspecciones manuales lentas."

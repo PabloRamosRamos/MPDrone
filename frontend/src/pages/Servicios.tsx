@@ -59,7 +59,9 @@ export default function Servicios() {
   return (
     <>
       <VideoHero
-        videoSrc="/videos/hero-drone.mp4"
+        videoSrc="/videos/hero-servicios.mp4"
+        videoSrcMobile="/videos/hero-servicios-mobile.mp4"
+        posterSrc="/videos/hero-servicios-poster.jpg"
         size="compact"
         title="Todo lo que hacemos volando"
         subtitle="Soluciones desde el aire para problemas que hoy se resuelven con andamios, arneses y cierres de calle."
