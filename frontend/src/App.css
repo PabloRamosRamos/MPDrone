@@ -175,7 +175,8 @@ body {
   align-items: center;
   padding-top: 96px;
   padding-bottom: 110px;
-  min-height: 640px;
+  min-height: 100vh;
+  height: 100vh;
 }
 
 .video-hero--compact {
@@ -903,8 +904,10 @@ body {
   }
 
   .video-hero {
-    min-height: 520px;
+    min-height: 100vh;
+    height: 100vh;
     padding-top: 64px;
+    padding-bottom: 64px;
   }
 
   .video-hero--compact {
@@ -988,7 +991,8 @@ body {
   }
 
   .video-hero {
-    min-height: 480px;
+    min-height: 100vh;
+    height: 100vh;
     padding-top: 56px;
     padding-bottom: 56px;
   }
