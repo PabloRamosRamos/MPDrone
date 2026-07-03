@@ -875,25 +875,24 @@ body {
 
   .nav-links {
     position: fixed;
-    top: 78px;
+    top: 68px;
     left: 0;
     right: 0;
     flex-direction: column;
     align-items: flex-start;
     gap: 4px;
     background: #0A2540;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    padding: 12px 24px 24px;
-    transform: translateY(-8px);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 16px 24px 24px;
+    max-height: 0;
+    overflow: hidden;
     opacity: 0;
-    pointer-events: none;
-    transition: all 0.2s;
+    transition: all 0.3s ease;
   }
 
   .nav-links--open {
-    transform: translateY(0);
+    max-height: 100vh;
     opacity: 1;
-    pointer-events: auto;
   }
 
   .nav-link {
