@@ -190,18 +190,16 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 0;
-  opacity: 1;
-  background: #000;
+  z-index: 1;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 .video-hero-overlay {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background:
-    linear-gradient(90deg, rgba(6, 19, 33, 0.65) 0%, rgba(6, 19, 33, 0.45) 42%, rgba(6, 19, 33, 0.25) 100%),
-    linear-gradient(0deg, rgba(6, 19, 33, 0.55) 0%, transparent 45%, rgba(6, 19, 33, 0.3) 100%);
+  background: transparent;
   pointer-events: none;
 }
 
@@ -217,17 +215,14 @@ body {
   position: absolute;
   inset: 0;
   z-index: 1;
-  opacity: 0.02;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.6) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.6) 1px, transparent 1px);
-  background-size: 64px 64px;
+  opacity: 0;
   pointer-events: none;
+  display: none;
 }
 
 .video-hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 10;
   width: 100%;
 }
 
